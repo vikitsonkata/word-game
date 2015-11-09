@@ -39,11 +39,13 @@ int main()
                                 }
                                 if(dir1==0 && dir2==0)
                                     continue;
-                                if(table[i+dir1*pos][j+dir2*pos]==word[pos] && pos==word.length()-1)
-                                {
-                                    br++;
-                                    pos=0;
-                                }
+                                if(table[i+dir1*pos][j+dir2*pos]==word[pos])
+                                    if(pos==word.length()-1)
+                                        {
+                                            br++;
+                                            pos=0;
+                                            break;
+                                        }
                                 else
                                 {
                                     pos=0;
